@@ -45,6 +45,8 @@ def bin_to_dec(num: str, neg: bool) -> int:
     return value if not neg else -value
 
 def dec_to_bin(num: int) -> str:
+    if num == 0:
+        return '0'
     string = []
     q, r = num, 999
     while q > 0:
