@@ -31,3 +31,16 @@ generate
         s[i] or whatever;
     end
 endgenerate
+
+module clock(a);
+output reg a;
+initial
+begin
+    a = 0;
+end
+always
+begin
+    #10;
+    a = ~a;
+end
+endmodule
